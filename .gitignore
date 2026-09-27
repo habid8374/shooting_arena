@@ -1,0 +1,26 @@
+# Dependencias
+node_modules/
+
+# Builds
+dist/
+dev-dist/
+*.tsbuildinfo
+
+# Cobertura de pruebas
+coverage/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Entorno local
+.env
+.env.local
+.env.*.local
+
+# Editores y sistema
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

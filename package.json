@@ -1,0 +1,36 @@
+{
+  "name": "shooting-arenas",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Shooting Arenas: aventura 3D de bloques pastel con disparos de burbujas y mundos (PWA).",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "idb": "^8.0.3",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^22.20.4",
+    "@types/three": "^0.186.0",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.12.0",
+    "prettier": "^3.9.9",
+    "typescript": "~6.0",
+    "typescript-eslint": "^8.70.1",
+    "vite": "^8.3.1",
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^5.0.2"
+  }
+}
