@@ -1,0 +1,131 @@
+/* Pantallas de menú, carga y pausa */
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: max(16px, env(safe-area-inset-top)) 16px max(16px, env(safe-area-inset-bottom));
+  text-align: center;
+}
+
+.screen--solid {
+  background: linear-gradient(160deg, var(--ui-secondary), var(--ui-bg) 55%, var(--ui-primary));
+}
+
+.screen--overlay {
+  background: rgba(255, 248, 240, 0.72);
+  backdrop-filter: blur(4px);
+}
+
+.screen[hidden] {
+  display: none;
+}
+
+.panel {
+  background: var(--ui-panel);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  min-width: min(320px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.logo-title {
+  margin: 0;
+  font-size: clamp(2rem, 7vw, 3.6rem);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: var(--ui-text);
+  text-shadow:
+    3px 3px 0 var(--ui-primary),
+    6px 6px 0 var(--ui-secondary);
+}
+
+.subtitle {
+  margin: 0;
+  opacity: 0.8;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--ui-text);
+  background: var(--ui-primary);
+  border: none;
+  border-radius: var(--radius);
+  padding: 12px 24px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition:
+    transform 0.1s ease,
+    filter 0.1s ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.btn--secondary {
+  background: var(--ui-secondary);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-bar {
+  width: min(260px, 70vw);
+  height: 14px;
+  border-radius: 999px;
+  background: var(--ui-panel);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.loading-bar > div {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--ui-primary), var(--ui-accent));
+  transition: width 0.3s ease;
+}
+
+.fps-counter {
+  position: absolute;
+  top: max(8px, env(safe-area-inset-top));
+  right: 8px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: var(--ui-panel);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+.fps-counter[hidden] {
+  display: none;
+}
+
+.hint {
+  position: absolute;
+  bottom: max(16px, env(safe-area-inset-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  border-radius: 12px;
+  background: var(--ui-panel);
+  box-shadow: var(--shadow);
+  font-size: 0.9rem;
+}

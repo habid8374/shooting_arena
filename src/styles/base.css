@@ -1,0 +1,54 @@
+/* Estilos base: variables de color (las cambia el tema) y reglas generales. */
+:root {
+  --ui-bg: #fff8f0;
+  --ui-panel: #ffffff;
+  --ui-text: #5a5a7a;
+  --ui-primary: #ffafcc;
+  --ui-secondary: #bde0fe;
+  --ui-accent: #ffd6a5;
+  --radius: 14px;
+  --shadow: 0 6px 18px rgba(90, 90, 122, 0.15);
+  /* Tipografía redondeada del sistema (sin descargas, funciona offline) */
+  --font:
+    ui-rounded, 'SF Pro Rounded', 'Nunito', 'Quicksand', 'Arial Rounded MT Bold', system-ui,
+    sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--ui-bg);
+  color: var(--ui-text);
+  font-family: var(--font);
+  /* Evita scroll, zoom con doble toque y selección accidental en celulares */
+  touch-action: none;
+  overscroll-behavior: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#game-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#ui-root {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Cualquier pantalla/panel dentro del UI sí recibe clics */
+#ui-root > * {
+  pointer-events: auto;
+}
