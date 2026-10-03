@@ -1,0 +1,35 @@
+{
+  "id": "cuevas-caramelo",
+  "order": 3,
+  "name": "Cuevas de Caramelo",
+  "emoji": "🍬",
+  "description": "Montes de caramelo llenos de túneles dulces y bastones de dulce.",
+  "seed": 3603,
+  "size": { "chunksX": 6, "chunksZ": 6 },
+  "palette": {
+    "sky": "#FFE3C8",
+    "sunset": "#FFB5A7"
+  },
+  "terrain": {
+    "baseHeight": 28,
+    "amplitude": 10,
+    "frequency": 0.03,
+    "octaves": 4,
+    "waterLevel": -1,
+    "layers": {
+      "surface": "caramel",
+      "subsurface": "caramel",
+      "subsurfaceDepth": 4,
+      "deep": "candy",
+      "shore": "caramel"
+    },
+    "caves": { "frequency": 0.08, "threshold": 0.6, "minY": 4, "maxY": 34 },
+    "trees": {
+      "density": 0.01,
+      "trunk": "candy",
+      "leaves": "candy",
+      "minHeight": 3,
+      "maxHeight": 4
+    }
+  }
+}

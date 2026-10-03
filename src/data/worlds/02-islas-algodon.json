@@ -1,0 +1,36 @@
+{
+  "id": "islas-algodon",
+  "order": 2,
+  "name": "Islas de Algodón",
+  "emoji": "🏝️",
+  "description": "Islas de arena rodeadas de un mar celeste. ¡Construye puentes para cruzar!",
+  "seed": 2402,
+  "size": { "chunksX": 6, "chunksZ": 6 },
+  "palette": {
+    "sky": "#C8ECFF",
+    "water": "#9ED8F5",
+    "leaves": "#CAFFBF"
+  },
+  "terrain": {
+    "baseHeight": 22,
+    "amplitude": 5,
+    "frequency": 0.03,
+    "octaves": 3,
+    "waterLevel": 18,
+    "layers": {
+      "surface": "grass",
+      "subsurface": "sand",
+      "subsurfaceDepth": 3,
+      "deep": "stone",
+      "shore": "sand"
+    },
+    "islands": { "frequency": 0.035, "threshold": 0.5 },
+    "trees": {
+      "density": 0.012,
+      "trunk": "wood",
+      "leaves": "leaves",
+      "minHeight": 4,
+      "maxHeight": 6
+    }
+  }
+}

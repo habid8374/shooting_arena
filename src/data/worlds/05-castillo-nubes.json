@@ -1,0 +1,30 @@
+{
+  "id": "castillo-nubes",
+  "order": 5,
+  "name": "Castillo de Nubes",
+  "emoji": "🌙",
+  "description": "Islas de nubes flotando en el cielo nocturno. Aquí vive el jefe final.",
+  "seed": 5005,
+  "size": { "chunksX": 6, "chunksZ": 6 },
+  "palette": {
+    "sky": "#B8A6D9",
+    "snow": "#FFF6FF",
+    "accentLilac": "#BFA8E0"
+  },
+  "terrain": {
+    "baseHeight": 34,
+    "amplitude": 4,
+    "frequency": 0.04,
+    "octaves": 3,
+    "waterLevel": -1,
+    "layers": {
+      "surface": "cloud",
+      "subsurface": "cloud",
+      "subsurfaceDepth": 2,
+      "deep": "brick",
+      "shore": "cloud"
+    },
+    "islands": { "frequency": 0.04, "threshold": 0.48 },
+    "floating": true
+  }
+}

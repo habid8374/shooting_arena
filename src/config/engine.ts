@@ -14,3 +14,21 @@ export const ENGINE = {
   /** Límite de resolución (devicePixelRatio) para cuidar el rendimiento. */
   maxPixelRatio: 2,
 } as const;
+
+/** Medidas del mundo de bloques. */
+export const WORLD = {
+  /** Ancho y largo de un chunk en bloques. */
+  chunkSize: 16,
+  /** Alto de un chunk (y del mundo) en bloques. */
+  chunkHeight: 64,
+  /** Tamaño en píxeles de cada textura del atlas. */
+  tileSize: 16,
+  /** Cuántos chunks se generan antes de dejar respirar a la pantalla de carga. */
+  chunksPerLoadingSlice: 4,
+  /** Sombreado por cara (simula luz sin cálculos costosos). */
+  faceShade: { top: 1, bottom: 0.62, x: 0.84, z: 0.92 },
+  /** Opacidad del agua. */
+  waterOpacity: 0.72,
+  /** La niebla empieza en esta fracción de la distancia de render. */
+  fogStartFraction: 0.6,
+} as const;

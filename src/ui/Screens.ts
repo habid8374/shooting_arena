@@ -37,7 +37,7 @@ export class Screens {
       text: '⚙ Ajustes (Fase 9)',
     });
     settingsBtn.disabled = true;
-    this.menu = el('section', { className: 'screen screen--solid', attrs: { hidden: '' } }, [
+    this.menu = el('section', { className: 'screen screen--menu', attrs: { hidden: '' } }, [
       el('h1', { className: 'logo-title', text: 'Shooting Arenas' }),
       el('p', { className: 'subtitle', text: 'Aventura de bloques y burbujas' }),
       el('div', { className: 'panel' }, [playBtn, settingsBtn]),
@@ -65,12 +65,19 @@ export class Screens {
     root.append(this.loading, this.menu, this.pause, this.hint, this.fps);
 
     bus.on('state:changed', ({ to }) => this.show(to));
+    bus.on('world:loaded', ({ name, emoji }) => this.setHint(`${emoji} ${name}`));
     bus.on('perf:fps', ({ fps }) => (this.fps.textContent = `${fps} FPS`));
     bus.on('config:changed', ({ settings }) => this.setFpsVisible(settings.graphics.showFps));
   }
 
   setLoadingProgress(fraction: number): void {
     this.loadingFill.style.width = `${Math.round(Math.min(1, Math.max(0, fraction)) * 100)}%`;
+  }
+
+  /** Texto de ayuda que se ve mientras se juega. */
+  setHint(worldLabel: string): void {
+    const parts = [worldLabel, 'Arrastra para girar · Rueda: zoom · 1–5: cambiar mundo · P: pausa'];
+    this.hint.textContent = parts.filter(Boolean).join('  ·  ');
   }
 
   setFpsVisible(visible: boolean): void {

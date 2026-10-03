@@ -14,6 +14,8 @@ export interface GameEvents {
   'state:changed': { from: GameStateName; to: GameStateName };
   /** Algún ajuste cambió (se envía la configuración completa ya validada). */
   'config:changed': { settings: Settings };
+  /** Terminó de cargarse un mundo. */
+  'world:loaded': { id: string; name: string; emoji: string };
   /** Se midió el rendimiento (fotogramas por segundo). */
   'perf:fps': { fps: number };
 }

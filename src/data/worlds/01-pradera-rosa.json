@@ -1,0 +1,35 @@
+{
+  "id": "pradera-rosa",
+  "order": 1,
+  "name": "Pradera Rosa",
+  "emoji": "🌸",
+  "description": "Colinas suaves con árboles de flores rosadas y lagos tranquilos.",
+  "seed": 1201,
+  "size": { "chunksX": 6, "chunksZ": 6 },
+  "palette": {
+    "sky": "#FFD9E8",
+    "leaves": "#FFC8DD",
+    "accentMint": "#FFAFCC"
+  },
+  "terrain": {
+    "baseHeight": 20,
+    "amplitude": 7,
+    "frequency": 0.025,
+    "octaves": 4,
+    "waterLevel": 17,
+    "layers": {
+      "surface": "grass",
+      "subsurface": "dirt",
+      "subsurfaceDepth": 3,
+      "deep": "stone",
+      "shore": "sand"
+    },
+    "trees": {
+      "density": 0.018,
+      "trunk": "wood",
+      "leaves": "leaves",
+      "minHeight": 3,
+      "maxHeight": 5
+    }
+  }
+}
