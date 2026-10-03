@@ -1,0 +1,31 @@
+{
+  "id": "montana-nieve-lavanda",
+  "order": 4,
+  "name": "Montaña de Nieve Lavanda",
+  "emoji": "❄️",
+  "description": "Picos nevados de color lavanda. Cuidado con los resbalones.",
+  "seed": 4804,
+  "size": { "chunksX": 6, "chunksZ": 6 },
+  "palette": {
+    "sky": "#E2D6F5",
+    "grass": "#D8CCEB",
+    "stone": "#C9C0E0",
+    "leaves": "#E8E0F7"
+  },
+  "terrain": {
+    "baseHeight": 26,
+    "amplitude": 18,
+    "frequency": 0.02,
+    "octaves": 5,
+    "waterLevel": 14,
+    "layers": {
+      "surface": "grass",
+      "subsurface": "dirt",
+      "subsurfaceDepth": 2,
+      "deep": "stone",
+      "shore": "stone"
+    },
+    "snowLine": { "height": 30, "surface": "snow_grass" },
+    "trees": { "density": 0.01, "trunk": "wood", "leaves": "snow", "minHeight": 4, "maxHeight": 6 }
+  }
+}
