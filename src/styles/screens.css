@@ -15,6 +15,15 @@
   background: linear-gradient(160deg, var(--ui-secondary), var(--ui-bg) 55%, var(--ui-primary));
 }
 
+.screen--menu {
+  background: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--ui-secondary) 55%, transparent),
+    color-mix(in srgb, var(--ui-bg) 35%, transparent) 55%,
+    color-mix(in srgb, var(--ui-primary) 55%, transparent)
+  );
+}
+
 .screen--overlay {
   background: rgba(255, 248, 240, 0.72);
   backdrop-filter: blur(4px);
@@ -128,4 +137,7 @@
   background: var(--ui-panel);
   box-shadow: var(--shadow);
   font-size: 0.9rem;
+  max-width: calc(100% - 32px);
+  text-align: center;
+  pointer-events: none;
 }

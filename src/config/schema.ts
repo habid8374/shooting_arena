@@ -99,7 +99,7 @@ export const settingsSchema = {
     bubbleDamage: num('Daño de burbuja', 10, 1, 100, 1),
   },
   graphics: {
-    renderDistance: num('Distancia de render (chunks)', 4, 2, 12, 1),
+    renderDistance: num('Distancia de render (chunks)', 5, 2, 12, 1),
     fov: num('Campo de visión (FOV)', 75, 50, 110, 1),
     quality: choice('Calidad', 'auto', ['auto', 'baja', 'media', 'alta'] as const),
     particles: bool('Partículas', true),
